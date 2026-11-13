@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #071018;
+  --color-surface: #0e1c27;
+  --color-surface-2: #143044;
+  --color-fg: #d7e6ef;
+  --color-muted: #8aa0b0;
+  --color-primary: #2ec4b6;
+  --color-accent: #e8a54b;
+  --color-border: #1e3648;
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius-lg: 0.875rem;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+}
+
+.tunnel-frame {
+  aspect-ratio: 2 / 1;
+  background: #071018;
+}
+
+.lab-range {
+  accent-color: var(--color-primary);
+  width: 100%;
+  height: 2.75rem;
+}
+
+.legend-pressure {
+  background: linear-gradient(90deg, #0e1f5c, #0c6eb8, #4cc9d9, #f0f1ec, #f6a647, #d9381a, #7a0a0f);
+}
+
+.legend-viridis {
+  background: linear-gradient(90deg, #440154, #3b528b, #21918c, #5ec962, #fde725);
+}
+
+.legend-contrast {
+  background: linear-gradient(90deg, #051022, #006bb5, #00d9c9, #f6c717, #e6140a);
+}
