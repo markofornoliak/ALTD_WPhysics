@@ -1,6 +1,8 @@
 # ALTD_WPhysics
 
-Browser wind tunnel. A two-dimensional section of the AeroLab 3D fractional-step MAC scheme: staggered faces, tunnel boundaries, smoothstep inlet ramp from rest, and a density-weighted pressure Poisson equation with \(p = 0\) on the outlet face.
+Browser wind tunnel, live at [markofornoliak.github.io/ALTD_WPhysics](https://markofornoliak.github.io/ALTD_WPhysics/).
+
+A two-dimensional section of the AeroLab 3D fractional-step MAC scheme: staggered faces, tunnel boundaries, smoothstep inlet ramp from rest, and a density-weighted pressure Poisson equation with \(p = 0\) on the outlet face.
 
 Air is \(\rho = 1.204\,\mathrm{kg/m^3}\), \(\mu = 1.81\times 10^{-5}\,\mathrm{Pa\cdot s}\). The nominal cylinder is the AeroLab point, \(D = 20\,\mathrm{mm}\), \(U = 0.113\,\mathrm{m/s}\), \(\mathrm{Re} \approx 150\).
 
@@ -21,4 +23,5 @@ Bodies follow the AeroLab set as tunnel silhouettes: cylinder, cube, NACA 0012, 
 - `src/lib/wind/solver.ts` — MAC step, masks, coefficients
 - `src/lib/wind/colormap.ts` — AeroLab color stops
 - `src/components/wind-lab.tsx` — tunnel view and controls
-- `src/routes/index.tsx` — page
+- `pages/` — static entry built for GitHub Pages (`vite.pages.config.ts`)
+- `site/` — the built page that Actions publishes
